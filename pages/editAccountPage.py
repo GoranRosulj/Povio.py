@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, Locator
 
 class EditAccountPage:
-    
+
     def __init__(self, page: Page):
         self.page = page
         # Locator for the header (assuming "Edit User" is displayed).
@@ -45,26 +45,26 @@ class EditAccountPage:
 
     async def click_on_cancel_account(self):
         await self.cancel_account_button.click()
-    
+
     # A method to change user's name
     async def update_name(self, new_name: str, current_password: str):
         await self.fill_user_name_field(new_name)
         await self.fill_user_current_password(current_password)
         await self.click_on_update()
-    
+
     # A method to change user's email
     async def update_email(self, new_email: str, current_password: str):
         await self.fill_user_email_field(new_email)
         await self.fill_user_current_password(current_password)
         await self.click_on_update()
-    
+
     # A method to change user's name and email
     async def update_name_and_email(self, new_name: str, new_email: str, current_password: str):
         await self.fill_user_name_field(new_name)
         await self.fill_user_email_field(new_email)
         await self.fill_user_current_password(current_password)
         await self.click_on_update()
-    
+
     # A method to change the password
     async def update_password(self, new_password: str, current_password: str):
         await self.fill_user_pass_field(new_password)

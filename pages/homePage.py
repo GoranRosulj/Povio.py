@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, Locator
 
 class HomePage:
-    
+
     def __init__(self, page: Page):
         self.page = page
         self.welcome = page.locator('h3:has-text("Welcome")')

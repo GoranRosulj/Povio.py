@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, Locator
 
 class CampaignsPage:
-    
+
     def __init__(self, page: Page):
         self.page = page
         # Locators for elements on the Campaigns page.

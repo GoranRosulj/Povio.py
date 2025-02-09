@@ -20,27 +20,27 @@ class CommonUIComponents:
     # A method to get the flash notice text
     async def get_flash_notice_text(self):
         return await self.flashNotice.text_content()
-    
+
     # A method to get the flash alert text
     async def get_flash_alert_text(self):
         return await self.flashAlert.text_content()
-    
+
     # A method to verify the flash notice is visible
     async def verify_flash_notice(self):
         await expect(self.flashNotice).to_be_visible()
-    
+
     # A method to verify the flash alert is visible
     async def verify_flash_alert(self):
         await expect(self.flashAlert).to_be_visible()
-    
+
     # A method to verify the flash x button is visible
     async def verify_flash_x_button(self):
         await expect(self.flashXButton).to_be_visible()
-    
+
     # A method to verify the logo is visible
     async def verify_logo(self):
         await expect(self.logo).to_be_visible()
-    
+
     # A method to click the flash x button
     async def click_flash_x_button(self):
         await self.flashXButton.click()
